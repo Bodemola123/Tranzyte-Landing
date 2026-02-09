@@ -1,0 +1,90 @@
+.courses {
+  padding: 8rem 4rem;
+  background: linear-gradient(135deg, var(--deep-blue) 0%, #051533 100%);
+  color: var(--white);
+}
+
+.courses-intro {
+  max-width: 700px;
+  margin: 0 auto 4rem;
+  text-align: center;
+}
+
+.courses-intro h2 {
+  color: var(--white);
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 3.5rem;
+  letter-spacing: 2px;
+  margin-bottom: 1.5rem;
+}
+
+.courses-intro p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+  line-height: 1.8;
+}
+
+.course-list {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.course-item {
+  padding: 1.8rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 140, 0, 0.2);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.course-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 0;
+  background: var(--safety-orange);
+  transition: height 0.4s ease;
+}
+
+.course-item:hover {
+  background: rgba(255, 140, 0, 0.08);
+  border-color: var(--safety-orange);
+  transform: translateY(-5px);
+}
+
+.course-item:hover::before {
+  height: 100%;
+}
+
+.course-number {
+  color: var(--safety-orange);
+  font-weight: 700;
+  font-size: 0.85rem;
+  margin-bottom: 0.5rem;
+}
+
+.course-item h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .courses {
+    padding: 4rem 2rem;
+  }
+
+  .courses-intro h2 {
+    font-size: 2.5rem;
+  }
+
+  .course-list {
+    grid-template-columns: 1fr;
+  }
+}
