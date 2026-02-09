@@ -82,19 +82,23 @@ const courses = [
 ];
 
 
-const CourseItem = ({ course, index }) => {
+const CourseItem = ({ course, index, isOpen, setOpenIndex }) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-50px" });
-  const [open, setOpen] = useState(false);
+
+  const handleClick = () => {
+    setOpenIndex(isOpen ? null : index);
+  };
 
   return (
     <motion.div
+      layout
       ref={ref}
-      className={`course-item ${open ? "open" : ""}`}
+      className={`course-item ${isOpen ? "open" : ""}`}
       initial={{ opacity: 0, x: -20 }}
       animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
       transition={{ duration: 0.5, delay: index * 0.05 }}
-      onClick={() => setOpen(!open)}
+      onClick={handleClick}
     >
       <div className="course-number">
         Course {String(index + 1).padStart(2, "0")}
@@ -103,7 +107,7 @@ const CourseItem = ({ course, index }) => {
       <h3>{course.title}</h3>
 
       <AnimatePresence>
-        {open && (
+        {isOpen && (
           <motion.div
             className="course-details"
             initial={{ opacity: 0, height: 0 }}
@@ -123,7 +127,11 @@ const CourseItem = ({ course, index }) => {
   );
 };
 
+
 const Courses = () => {
+
+  const [openIndex, setOpenIndex] = useState(null);
+
   return (
     <section className="courses" id="courses">
       <div className="courses-intro">
@@ -136,9 +144,16 @@ const Courses = () => {
       </div>
 <div className="course-list">
   {courses.map((course, index) => (
-    <CourseItem key={index} course={course} index={index} />
+    <CourseItem
+      key={index}
+      course={course}
+      index={index}
+      isOpen={openIndex === index}
+      setOpenIndex={setOpenIndex}
+    />
   ))}
 </div>
+
     </section>
   );
 };

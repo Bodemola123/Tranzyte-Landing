@@ -8,7 +8,7 @@
   justify-content: space-between;
   align-items: center;
   z-index: 1000;
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--white);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(255, 140, 0, 0.2);
   animation: slideDown 0.6s ease-out;
@@ -106,7 +106,7 @@
 }
 
 .nav a {
-  color: var(--white);
+  color: var(--deep-blue);
   text-decoration: none;
   font-weight: 400;
   font-size: 0.95rem;
