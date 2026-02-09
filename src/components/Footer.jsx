@@ -1,13 +1,13 @@
 import React from 'react';
 import './Footer.css';
-import Logo from "../assets/images/logo.png";
+import Logo from "../assets/images/logo1.png";
 
 const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-content">
         <div className="footer-logo">
-          <img src={Logo} alt='Tranzyte Logo' />
+          <img src={Logo} alt="Tranzyte Logo" className="logo1" />
         </div>
         <p className="footer-tagline">School of Transport and Logistics Excellence, Nigeria</p>
         <div className="footer-links">

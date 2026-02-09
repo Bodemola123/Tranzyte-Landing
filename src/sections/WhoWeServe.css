@@ -37,10 +37,19 @@
   transform: scale(1.05);
 }
 
-.audience-emoji {
-  font-size: 3rem;
-  margin-bottom: 1rem;
+.audience-icon {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 140, 0, 0.1);
+  border-radius: 12px;
+  color: var(--safety-orange);
+  transition: all 0.3s ease;
 }
+
 
 .audience-card h3 {
   font-size: 1.2rem;
@@ -65,4 +74,16 @@
   .audience-grid {
     grid-template-columns: 1fr;
   }
+}
+
+.audience-card:hover {
+  background: var(--deep-blue);
+  color: var(--white);
+  transform: scale(1.05);
+}
+
+.audience-card:hover .audience-icon {
+  background: var(--safety-orange);
+  color: var(--white);
+  transform: scale(1.1);
 }

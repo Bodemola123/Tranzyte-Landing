@@ -88,3 +88,49 @@
     grid-template-columns: 1fr;
   }
 }
+
+.course-item {
+  padding: 1.8rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 140, 0, 0.2);
+  transition: all 0.3s ease;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.course-item:hover {
+  background: rgba(255, 140, 0, 0.08);
+  border-color: var(--safety-orange);
+  transform: translateY(-5px);
+}
+
+.course-details {
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+.course-action {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.course-action button {
+  background: var(--safety-orange);
+  color: var(--white);
+  border: none;
+  padding: 0.6rem 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.course-action button:hover {
+  background: #ff9c33;
+  transform: translateY(-2px);
+}

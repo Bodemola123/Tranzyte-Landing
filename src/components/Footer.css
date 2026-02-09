@@ -67,3 +67,8 @@
     gap: 1rem;
   }
 }
+.logo1 {
+  height: 2rem;        /* h-12 = 48px */
+  width: auto;         /* w-auto */
+  margin-bottom: 1rem; /* mb-4 = 16px */
+}

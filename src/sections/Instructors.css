@@ -1,0 +1,98 @@
+.instructors {
+  padding: 8rem 4rem;
+  background: var(--deep-blue);
+  color: var(--white);
+}
+
+.instructors-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Section Labels */
+.section-label {
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 2px;
+  color: var(--safety-orange);
+  margin-bottom: 1rem;
+}
+
+/* Founder Section */
+.founder-section {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.founder-section h2 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 3rem;
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+}
+
+.founder-qualification {
+  font-size: 1.2rem;
+  opacity: 0.9;
+  margin-bottom: 0.5rem;
+}
+
+.founder-university {
+  font-size: 1rem;
+  color: var(--safety-orange);
+  font-weight: 600;
+}
+
+/* Divider */
+.divider {
+  height: 1px;
+  background: rgba(255, 140, 0, 0.3);
+  margin: 3rem 0;
+}
+
+/* Instructors Section */
+.instructors-section {
+  text-align: center;
+}
+
+.instructors-grid {
+  margin-top: 2.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+}
+
+.instructor-card {
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 140, 0, 0.2);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.instructor-card:hover {
+  background: rgba(255, 140, 0, 0.08);
+  border-color: var(--safety-orange);
+  transform: translateY(-6px);
+}
+
+.instructor-card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.instructor-card p {
+  color: var(--safety-orange);
+  font-weight: 600;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .instructors {
+    padding: 4rem 2rem;
+  }
+
+  .founder-section h2 {
+    font-size: 2.2rem;
+  }
+}

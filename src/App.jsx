@@ -8,6 +8,7 @@ import Courses from './sections/Courses';
 import WhoWeServe from './sections/WhoWeServe';
 import Enroll from './sections/Enroll';
 import './App.css';
+import Instructors from './sections/Instructors';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <About />
         <Courses />
         <WhoWeServe />
+        <Instructors/>
         <Enroll />
       </main>
       <Footer />

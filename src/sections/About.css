@@ -90,3 +90,21 @@
     grid-template-columns: 1fr;
   }
 }
+.feature-icon {
+  width: 60px;
+  height: 60px;
+  background: rgba(255, 140, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  margin-bottom: 1.2rem;
+  color: var(--safety-orange);
+  transition: all 0.3s ease;
+}
+
+.feature-card:hover .feature-icon {
+  background: var(--safety-orange);
+  color: var(--white);
+  transform: scale(1.1);
+}
