@@ -91,15 +91,16 @@ const CourseItem = ({ course, index, isOpen, setOpenIndex }) => {
   };
 
   return (
-    <motion.div
-      layout
-      ref={ref}
-      className={`course-item ${isOpen ? "open" : ""}`}
-      initial={{ opacity: 0, x: -20 }}
-      animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
-      transition={{ duration: 0.5, delay: index * 0.05 }}
-      onClick={handleClick}
-    >
+<motion.div
+  layout
+  ref={ref}
+  className={`course-item ${isOpen ? "open" : ""}`}
+  initial={{ opacity: 0, x: -20 }}
+  animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
+  transition={{ duration: 0.5, delay: index * 0.05 }}
+  onClick={handleClick}
+>
+
       <div className="course-number">
         Course {String(index + 1).padStart(2, "0")}
       </div>
@@ -109,6 +110,7 @@ const CourseItem = ({ course, index, isOpen, setOpenIndex }) => {
       <AnimatePresence>
         {isOpen && (
           <motion.div
+          layout
             className="course-details"
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}

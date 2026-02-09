@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Header.css";
 import Logo from "../assets/images/logo.png";
+import { Menu, X } from "lucide-react";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -13,7 +14,6 @@ const Header = () => {
         </div>
       </div>
 
-      {/* Desktop Nav */}
       <nav className={`nav ${menuOpen ? "active" : ""}`}>
         <a href="#about" onClick={() => setMenuOpen(false)}>About</a>
         <a href="#courses" onClick={() => setMenuOpen(false)}>Courses</a>
@@ -21,14 +21,11 @@ const Header = () => {
         <a href="#enroll" onClick={() => setMenuOpen(false)}>Enroll</a>
       </nav>
 
-      {/* Hamburger */}
       <div
-        className={`hamburger ${menuOpen ? "open" : ""}`}
+        className="menu-toggle"
         onClick={() => setMenuOpen(!menuOpen)}
       >
-        <span></span>
-        <span></span>
-        <span></span>
+        {menuOpen ? <X size={28} /> : <Menu size={28} />}
       </div>
     </header>
   );

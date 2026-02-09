@@ -103,8 +103,14 @@
 .course-item:hover {
   background: rgba(255, 140, 0, 0.08);
   border-color: var(--safety-orange);
-  transform: translateY(-5px);
 }
+
+.course-item.open {
+  transform: translateY(-5px);
+  border-color: var(--safety-orange);
+  background: rgba(255, 140, 0, 0.08);
+}
+
 
 .course-details {
   margin-top: 1rem;

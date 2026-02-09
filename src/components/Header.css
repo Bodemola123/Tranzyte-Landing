@@ -212,3 +212,15 @@
     font-size: 1.1rem;
   }
 }
+
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+  color: var(--deep-blue);
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+}
